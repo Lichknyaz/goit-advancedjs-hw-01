@@ -87,13 +87,5 @@ for (const {preview, original, description} of images) {
 
 gallery.insertAdjacentHTML("beforeend", addedImages);
 
-// gallery.addEventListener('click', e => {
-//   e.preventDefault();
-//   console.log(e.target.dataset.source);
-//   if (e.target.nodeName === "IMG") {
-//     const instance = basicLightbox.create(`
-//         <img src="${e.target.dataset.source}" width="800" height="600" alt="${e.target.dataset.alt}">
-// `)
-//     instance.show()
-//   }
-// })
+new SimpleLightbox('.gallery a', {captionsData: "alt", captionDelay: 250});
+
